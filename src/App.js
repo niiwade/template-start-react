@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/NavBar';
+// import Blog from "./components/Blog";
+import FeaturedPost from './components/FeaturedPost';
+import ListOfPost from './components/ListOfPost';
+import getAllPosts from "./resources/posts"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <ListOfPost posts={getAllPosts()} />
+
+      <FeaturedPost title={""} height={500} width={500} content={""} image={""} />
+
     </div>
   );
 }
