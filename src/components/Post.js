@@ -23,9 +23,9 @@ const Post = ({ post }) => {
                 <a href={post.blogLink} >Read More</a>
             </div>
             <button
-                onClick={() => setIsSelected(!isSelected)}
+                onClick={() => setIsSelected({ selected: false })}
                 style={{ height: 40, bordereRadius: 6, backgroundColor: "yellowgreen" }}>
-                {isSelected ? "selected" : "select"}
+                {isSelected.selected ? "selected" : "select"}
             </button>
         </div>
 
