@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../blog.css"
 
 
 const Post = ({ post }) => {
 
-    const [isSelected, setIsSelected] = useState(false)
+    const [isSelected, setIsSelected] = useState({ selected: false })
+
+    useEffect(() => {
+
+    }), [isSelected]
 
     return (
         <div className="blog-post">
