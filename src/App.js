@@ -5,10 +5,12 @@ import Navbar from './components/NavBar';
 import FeaturedPost from './components/FeaturedPost';
 import ListOfPost from './components/ListOfPost';
 import getAllPosts from "./resources/posts"
+import { Route } from "./Routes";
 
 function App() {
   return (
     <div className="App">
+
       <Navbar />
 
       <ListOfPost posts={getAllPosts()} />
@@ -16,6 +18,8 @@ function App() {
       <FeaturedPost title={""} height={500} width={500} content={""} image={""} />
 
     </div>
+
+
   );
 }
 

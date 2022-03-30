@@ -15,6 +15,9 @@ const Post = ({ post }) => {
                 <p>{post.content}</p>
                 <a href={post.blogLink} >Read More</a>
             </div>
+            <button>
+                Select
+            </button>
         </div>
 
     )
