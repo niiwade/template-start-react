@@ -5,7 +5,6 @@ import Navbar from './components/NavBar';
 import FeaturedPost from './components/FeaturedPost';
 import ListOfPost from './components/ListOfPost';
 import getAllPosts from "./resources/posts"
-import { Route } from "./Routes";
 
 function App() {
   return (

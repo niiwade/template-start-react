@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../blog.css"
 
 
 const Post = ({ post }) => {
+
+    const [isSelected, setIsSelected] = useState(false)
+
     return (
         <div className="blog-post">
             <div className="blog-post-image">
@@ -15,8 +18,10 @@ const Post = ({ post }) => {
                 <p>{post.content}</p>
                 <a href={post.blogLink} >Read More</a>
             </div>
-            <button>
-                Select
+            <button
+                onClick={() => setIsSelected(!isSelected)}
+                style={{ height: 40, bordereRadius: 6, backgroundColor: "yellowgreen" }}>
+                {isSelected ? "selected" : "select"}
             </button>
         </div>
 
