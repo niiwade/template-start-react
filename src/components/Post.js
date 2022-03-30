@@ -8,7 +8,7 @@ const Post = ({ post }) => {
 
     useEffect(() => {
 
-    }), [isSelected]
+    }, [isSelected])
 
     return (
         <div className="blog-post">
@@ -23,7 +23,7 @@ const Post = ({ post }) => {
                 <a href={post.blogLink} >Read More</a>
             </div>
             <button
-                onClick={() => setIsSelected({ selected: false })}
+                onClick={() => setIsSelected({ selected: !isSelected.selected })}
                 style={{ height: 40, bordereRadius: 6, backgroundColor: "yellowgreen" }}>
                 {isSelected.selected ? "selected" : "select"}
             </button>
